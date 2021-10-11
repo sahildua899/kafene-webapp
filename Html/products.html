@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/Css/base.css">
+    <link rel="stylesheet" href="/Css/products.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/Javascript/checklogin.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navigation-bar">
+        <div class="topbar">
+            <div class="logo-wrapper">
+                <img src="/Images/logo.png" alt="Logo">
+                <p class="brand-name">Kafene</p>
+            </div>
+            <nav>
+                <a href="/Html/order.html" class="menu-item" id="order">Orders</a>
+                <a href="#" class="menu-item" id="products">Products</a>
+                <a href="/Html/users.html" id="users" class="menu-item">Users</a>
+                <a id="logout-btn" class="logout">Logout</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- main Data -->
+    <div class="page-wrapper">
+        <h2 class="main-heading">Products</h1>
+        <div class="products-wrapper">
+            <div class="filter-wrapper">
+                <h3>Filters</h3>
+                <div class="filter-options">
+                    <p>Count:<span id="product-count">100</span></p>
+                    <!-- CheckBoxes -->
+                    <div class="checkbox-section">
+                    <label class="filter-checkbox">
+                    <input type="checkbox" name="expired" id="expired" checked = "">Expired</label><br>
+                    <label class="filter-checkbox">
+                    <input type="checkbox" name="lowstock" id="lowstock" checked = "">Low Stock</label><br>
+                    </div>
+                    <!-- Checkboxes finished -->
+                </div>
+            </div>
+            <!-- Products Section Starts -->
+            <div class="product-section">
+                <table class="product-table">
+                    <tr>
+                        <th>ID</th>
+                        <th>Product Name</th>
+                        <th>Product Brand</th>
+                        <th>Expiry Date</th>
+                        <th>Unit Price</th>
+                        <th>Stock</th>
+                    </tr>
+
+                    <tbody id="product-content">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="/Javascript/products.js"></script>
+    <script src="/Javascript/logout.js"></script>
+</body>
+</html>

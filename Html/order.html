@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/Css/base.css">
+    <link rel="stylesheet" href="/Css/order.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <script src="/Javascript/checklogin.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navigation-bar">
+        <div class="topbar">
+            <div class="logo-wrapper">
+                <img src="/Images/logo.png" alt="Logo">
+                <p class="brand-name">Kafene</p>
+            </div>
+            <nav>
+                <a href="./order.html" class="menu-item" id="order">Orders</a>
+                <a href="/Html/products.html" class="menu-item" id="product">Products</a>
+                <a href="/Html/users.html" id="users" class="menu-item">Users</a>
+                <a id="logout-btn" class="logout">Logout</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- main Data -->
+    <div class="page-wrapper">
+        <h2 class="main-heading">Orders</h1>
+        <div class="orders-wrapper">
+            <div class="filter-wrapper">
+                <h3>Filters</h3>
+                <div class="filter-options">
+                    <p>Count:<span id="order-count">100</span></p>
+                    <!-- CheckBoxes -->
+                    <div class="checkbox-section">
+                    <label class="filter-checkbox">
+                    <input type="checkbox" name="new" id="new" checked = "">New</label><br>
+                    <label class="filter-checkbox">
+                    <input type="checkbox" name="packed" id="packed" checked = "">Packed</label><br>
+                    <label class="filter-checkbox">
+                    <input type="checkbox" name="inTransit" id="inTransit" checked = " ">In Transit</label><br>
+                    <label  class="filter-checkbox">
+                    <input type="checkbox" name="delivered" id="delivered" checked = "">Delivered</label><br>
+                    </div>
+                    <!-- Checkboxes finished -->
+                </div>
+            </div>
+            <!-- Orders Section Starts -->
+            <div class="order-section">
+                <table class="order-table">
+                    <tr>
+                        <th>ID</th>
+                        <th>Customer</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+
+                    <tbody id="order-content">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="/Javascript/order.js"></script>
+    <script src="/Javascript/logout.js"></script>
+</body>
+</html>
